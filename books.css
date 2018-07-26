@@ -1,0 +1,97 @@
+body {
+    background-image: url(madera.jpg);
+}
+
+.logo {
+    width: 330px;
+    height: 200px;
+}
+
+.header {
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+.containerBooks {
+    margin: 0 90px;
+}
+
+.header.row.containerBooks {
+    margin-top: 27px;
+}
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 270px;
+    height: 430px;
+}
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 1.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-family: cursive;
+}
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+    background-color: darkred;
+}
+
+.imgCover {
+
+    width: 100%;
+}
+
+.botto {
+
+    text-align: center;
+    margin-top: 40px;
+}
+
+.textBack {
+    padding: 20px;
+}
+
+.logoText {
+    font-family: 'Eater', cursive;
+    font-size: 94px;
+    color: whitesmoke;
+}
